@@ -1,0 +1,33 @@
+import pygame,sys
+from pygame.locals import*
+
+
+pygame.init()
+
+window = pygame.display.set_mode((1200,600))
+pygame.display.set_caption('nikananananananananan')
+
+# R G B
+firoozi = (0,255,150)
+sabzz = (0,150,30)
+balck = (0,0,0)
+
+
+font = pygame.font.SysFont(None , 48)
+text = font.render('raaaah', True ,sabzz, firoozi)
+
+
+running = True
+
+while running:
+
+    for event in pygame.event.get():
+
+        if event.type == pygame.QUIT:
+            running = False
+
+    window.fill(sabzz)
+    window.blit(text , (100,100))
+    pygame.draw.rect(window, firoozi,(470,300 ,200,200))
+
+    pygame.display.update()
